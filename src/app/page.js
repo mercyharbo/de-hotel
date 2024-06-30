@@ -5,6 +5,7 @@ import Image from 'next/image'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
 import { FaArrowRightLong } from 'react-icons/fa6'
+import { IoStar } from 'react-icons/io5'
 
 import HeroImage from '@/app/assets/photo2.jpeg'
 import HeroImage1 from '@/app/assets/photo3.jpeg'
@@ -14,8 +15,6 @@ import HeroImage3 from '@/app/assets/photo5.jpeg'
 import HeroImage4 from '@/app/assets/photo6.jpeg'
 import HeroImage5 from '@/app/assets/photo7.jpeg'
 import HeroImage6 from '@/app/assets/photo8.jpeg'
-import Card from './component/Card'
-import { IoStar } from 'react-icons/io5'
 
 gsap.registerPlugin(useGSAP)
 
