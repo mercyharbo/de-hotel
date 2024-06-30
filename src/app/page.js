@@ -129,7 +129,7 @@ export default function Home() {
             <h1 className='heading uppercase font-bold text-6xl laptop:text-8xl'>
               D WHITE ROYALTY PLACE
             </h1>
-            <p className='paragraph text-xl large_laptop:text-base laptop:text-2xl'>
+            <p className='paragraph text-xl desktop:text-2xl large_laptop:text-base laptop:text-2xl'>
               Book your stay and enjoy luxury redefined at the most affordable
               rates
             </p>
@@ -163,10 +163,10 @@ export default function Home() {
             Welcome to our D WHITE ROYALTY PLACE
           </h3>
           <p className='laptop:text-base tablet:text-lg mobile:text-base small_mobile:text-base'>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
+            Nestled in the heart of the vibrant cityscape, Serenity Heights
+            Hotel offers a sanctuary of comfort and elegance. Our hotel is
+            designed to provide an unparalleled experience, blending modern
+            amenities with timeless charm.
           </p>
           <button className='bg-orange h-16 rounded-md text-white px-5 text-lg'>
             Book Now
@@ -180,20 +180,23 @@ export default function Home() {
             Choose the best place for your vacation
           </h4>
           <p className=''>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Et netus
-            et malesuada fames ac turpis egestas sed.
+            Experience the epitome of luxury in our exquisitely designed rooms
+            and suites. Each room is a haven of relaxation, featuring plush
+            bedding, state-of-the-art technology, and breathtaking views of the
+            city skyline. Whether you're here for business or leisure, our
+            accommodations provide the perfect retreat.
           </p>
         </div>
 
         <div className='grid gap-5 desktop:w-[80%] desktop:grid-cols-4 large_laptop:w-[90%] large_laptop:grid-cols-4 laptop:w-full laptop:grid-cols-4 tablet:w-full tablet:grid-cols-2 mobile:w-full mobile:grid-cols-1'>
           {roomsCard.map((item) => (
-            <Card
+            <Image
               key={item.id}
-              name={item.name}
-              imageUrl={item.imageUrl}
-              rating={item.rating}
-              price={item.price}
+              src={item.imageUrl}
+              alt={item.name}
+              width={400}
+              height={300}
+              className='object-cover object-center w-full'
             />
           ))}
         </div>
@@ -213,9 +216,10 @@ export default function Home() {
               Do you want to rent out the hotel{' '}
             </h1>
             <p className='lg:text-xl text-base'>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Consequat ac felis donec et odio pellentesque diam.
+              Nestled in the heart of the vibrant cityscape, Serenity Heights
+              Hotel offers a sanctuary of comfort and elegance. Our hotel is
+              designed to provide an unparalleled experience, blending modern
+              amenities with timeless charm.
             </p>
             <button className='bg-black h-16 rounded-md text-white px-5 text-lg flex items-center gap-2'>
               Book Now <FaArrowRightLong />
