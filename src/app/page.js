@@ -122,14 +122,14 @@ export default function Home() {
         />
 
         <div className=' w-full h-full absolute top-0 left-0 bg-[#00000079]'>
-          <div className='w-full flex flex-col justify-center items-start gap-3 text-white h-full px-5 desktop:w-[40%] large_laptop:w-[60%] laptop:px-14 large_laptop:px-20 laptop:w-[60%] tablet:w-[70%] mobile:w-full'>
-            <span className='welcome uppercase font-normal text-2xl laptop:text-4xl'>
+          <div className='w-full flex flex-col justify-center items-start gap-3 text-white h-full px-5 desktop:w-[40%] large_laptop:w-[40%] laptop:px-14 large_laptop:px-20 laptop:w-[60%] tablet:w-[70%] mobile:w-full'>
+            <span className='welcome uppercase font-normal text-2xl laptop:text-3xl'>
               welcome to
             </span>
             <h1 className='heading uppercase font-bold text-6xl laptop:text-8xl'>
               D WHITE ROYALTY PLACE
             </h1>
-            <p className='paragraph text-xl laptop:text-2xl'>
+            <p className='paragraph text-xl large_laptop:text-base laptop:text-2xl'>
               Book your stay and enjoy luxury redefined at the most affordable
               rates
             </p>
