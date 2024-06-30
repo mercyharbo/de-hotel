@@ -4,6 +4,7 @@ import { useRef } from 'react'
 import Image from 'next/image'
 import gsap from 'gsap'
 import { useGSAP } from '@gsap/react'
+import { FaArrowRightLong } from 'react-icons/fa6'
 
 import HeroImage from '@/app/assets/photo2.jpeg'
 import HeroImage1 from '@/app/assets/photo3.jpeg'
@@ -14,6 +15,7 @@ import HeroImage4 from '@/app/assets/photo6.jpeg'
 import HeroImage5 from '@/app/assets/photo7.jpeg'
 import HeroImage6 from '@/app/assets/photo8.jpeg'
 import Card from './component/Card'
+import { IoStar } from 'react-icons/io5'
 
 gsap.registerPlugin(useGSAP)
 
@@ -45,6 +47,33 @@ const roomsCard = [
     imageUrl: HeroImage6,
     rating: 4.9,
     price: '$300/day',
+  },
+]
+
+const testimoniesCard = [
+  {
+    id: 1,
+    name: 'John Doe',
+    address: '123 Maple Street, Springfield, IL, USA',
+    rating: 4.5,
+    comment:
+      'Great experience, the service was excellent and the place was very clean.',
+  },
+  {
+    id: 2,
+    name: 'Jane Smith',
+    address: '456 Oak Avenue, Lincoln, NE, USA',
+    rating: 4.8,
+    comment:
+      'Amazing service, highly recommend! The staff was very friendly and accommodating.',
+  },
+  {
+    id: 3,
+    name: 'Alex Johnson',
+    address: '789 Pine Road, Madison, WI, USA',
+    rating: 4.2,
+    comment:
+      'Good overall, but the waiting time was a bit long. Would visit again.',
   },
 ]
 
@@ -147,7 +176,7 @@ export default function Home() {
 
       <section className='flex flex-col justify-center items-center gap-10 px-5 py-10 laptop:px-14 large_laptop:px-20'>
         <div className='flex flex-col justify-center items-center gap-3 w-full mx-auto text-center laptop:w-[50%]'>
-          <h4 className='text-2xl font-semibold'>
+          <h4 className='text-3xl font-semibold'>
             Choose the best place for your vacation
           </h4>
           <p className=''>
@@ -157,7 +186,7 @@ export default function Home() {
           </p>
         </div>
 
-        <div className='grid gap-5 desktop:w-[80%] desktop:grid-cols-4 large_laptop:w-[80%] large_laptop:grid-cols-4 laptop:w-full laptop:grid-cols-4 tablet:w-full tablet:grid-cols-2 mobile:w-full mobile:grid-cols-1'>
+        <div className='grid gap-5 desktop:w-[80%] desktop:grid-cols-4 large_laptop:w-[90%] large_laptop:grid-cols-4 laptop:w-full laptop:grid-cols-4 tablet:w-full tablet:grid-cols-2 mobile:w-full mobile:grid-cols-1'>
           {roomsCard.map((item) => (
             <Card
               key={item.id}
@@ -167,6 +196,59 @@ export default function Home() {
               price={item.price}
             />
           ))}
+        </div>
+      </section>
+
+      <section className='relative w-full'>
+        <Image
+          src={HeroImage6}
+          alt='Hotel picture'
+          width={800}
+          height={200}
+          className='object-cover object-center w-full  h-[30rem] '
+        />
+        <div className=' w-full h-full absolute top-0 left-0 bg-[#00000079]'>
+          <div className='w-full flex flex-col justify-center items-start gap-5 text-white h-full px-5 desktop:w-[40%] large_laptop:w-[60%] laptop:px-14 large_laptop:px-20 laptop:w-[60%] tablet:w-[70%] mobile:w-full'>
+            <h1 className='font-semibold text-4xl'>
+              Do you want to rent out the hotel{' '}
+            </h1>
+            <p className='text-xl'>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Consequat ac felis donec et odio pellentesque diam.
+            </p>
+            <button className='bg-black h-16 rounded-md text-white px-5 text-lg flex items-center gap-2'>
+              Book Now <FaArrowRightLong />
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <section className='flex flex-col justify-center items-center gap-5 py-10 w-full mx-auto laptop:py-[6rem] laptop:w-[80%]'>
+        <h1 className='text-3xl font-semibold'>Our Customers Said</h1>
+
+        <div className='grid gap-10 py-8 w-full laptop:grid-cols-3 tablet:grid-cols-1 mobile:grid-cols-1'>
+          {testimoniesCard.map((item) => {
+            return (
+              <div
+                key={item.id}
+                className='shadow-2xl rounded-md bg-white p-5 h-[10rem] flex flex-col justify-start items-start gap-5'
+              >
+                <div className='flex justify-between items-start w-full'>
+                  <div className='flex flex-col justify-start items-start gap-1'>
+                    <h4 className=''>{item.name}</h4>
+                    <span className='text-[grey] text-sm'>{item.address}</span>
+                  </div>
+
+                  <div className='flex items-center gap-3'>
+                    <IoStar className='text-orange' />
+                    <span className='text-[grey]'>{item.rating}</span>
+                  </div>
+                </div>
+                <p className='text-[grey] text-sm'>{item.comment}</p>
+              </div>
+            )
+          })}
         </div>
       </section>
     </main>
