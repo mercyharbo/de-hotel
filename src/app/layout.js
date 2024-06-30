@@ -1,5 +1,6 @@
 import { Inter } from 'next/font/google'
 import Navbar from '@/app/component/NavComp'
+import FooterComp from './component/Footer'
 
 import './globals.css'
 
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
       <body className={`flex flex-col bg-[#E5E5E5] ${inter.className}`}>
         <Navbar />
         {children}
+        <FooterComp />
       </body>
     </html>
   )

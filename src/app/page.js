@@ -212,7 +212,7 @@ export default function Home() {
             <h1 className='font-semibold text-4xl'>
               Do you want to rent out the hotel{' '}
             </h1>
-            <p className='text-xl'>
+            <p className='lg:text-xl text-base'>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Consequat ac felis donec et odio pellentesque diam.
@@ -224,7 +224,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className='flex flex-col justify-center items-center gap-5 py-10 w-full mx-auto laptop:py-[6rem] laptop:w-[80%]'>
+      <section className='flex flex-col justify-center items-center gap-5 py-10 w-full mx-auto px-5 laptop:py-[6rem] laptop:w-[80%]'>
         <h1 className='text-3xl font-semibold'>Our Customers Said</h1>
 
         <div className='grid gap-10 py-8 w-full laptop:grid-cols-3 tablet:grid-cols-1 mobile:grid-cols-1'>
@@ -232,7 +232,7 @@ export default function Home() {
             return (
               <div
                 key={item.id}
-                className='shadow-2xl rounded-md bg-white p-5 h-[10rem] flex flex-col justify-start items-start gap-5'
+                className='shadow-2xl rounded-md bg-white p-5 h-[12rem] flex flex-col justify-around items-center gap-5'
               >
                 <div className='flex justify-between items-start w-full'>
                   <div className='flex flex-col justify-start items-start gap-1'>
